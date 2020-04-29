@@ -25,7 +25,7 @@ const source = {
 		pug:   './app/layout/pages/*.+(jade|pug)',
 		html:  './app/*.html',
 		css:   './app/css/',
-		sass:  './app/sass/*.sass',
+		sass:  './app/sass/*.scss',
 		fonts: './app/fonts/**/*.*',
 		img:   './app/img/**/*.*',
 		js:    './app/js/',
@@ -60,12 +60,12 @@ function pugproc() {
 function sassproc() {
 	const autoprefixer = require('autoprefixer');
 	return gulp.src(source.app.sass)
-	.pipe(sourcemaps.init())
+	// .pipe(sourcemaps.init())
 	.pipe(sass().on('error', sass.logError))
 	.pipe(concat('style.min.css'))
 	.pipe(gcmq())
 	.pipe(postcss([autoprefixer()]))
-	.pipe(sourcemaps.write('.'))
+	// .pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest(source.app.css))
 	.pipe(browserSync.reload({ stream: true }));
 }
@@ -73,9 +73,9 @@ gulp.task('sassproc', sassproc);
 
 function jsfiles() {
 	return gulp.src(source.app.libs)
-	.pipe(sourcemaps.init())
+	// .pipe(sourcemaps.init())
 	.pipe(concat('scripts.min.js'))
-	.pipe(sourcemaps.write('.'))
+	// .pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest(source.app.js))
 	.pipe(browserSync.stream());
 }

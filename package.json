@@ -1,5 +1,5 @@
 {
-  "name": "html_template",
+  "name": "online_store",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -45,10 +45,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flashgrinder/htmltemplate.git"
+    "url": "git+https://github.com/flashgrinder/onlineStore.git"
   },
   "bugs": {
-    "url": "https://github.com/flashgrinder/htmltemplate/issues"
+    "url": "https://github.com/flashgrinder/onlineStore/issues"
   },
-  "homepage": "https://github.com/flashgrinder/htmltemplate#readme"
+  "homepage": "https://github.com/flashgrinder/onlineStore#readme"
 }
