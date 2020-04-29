@@ -25,7 +25,7 @@ const source = {
 		pug:   './app/layout/pages/*.+(jade|pug)',
 		html:  './app/*.html',
 		css:   './app/css/',
-		sass:  './app/sass/*.scss',
+		sass:  './app/scss/*.scss',
 		fonts: './app/fonts/**/*.*',
 		img:   './app/img/**/*.*',
 		js:    './app/js/',
@@ -45,7 +45,7 @@ const source = {
 		pug: './app/**/*.+(jade|pug)',
 		html: './app/**/*.html',
 		css:  './app/css/**/*.css',
-		sass: './app/sass/**/*.+(sass|scss)',
+		sass: './app/scss/**/*.+(sass|scss)',
 		js:   './app/libs/**/*.js',
 		php:  './app/**/*.php'
 	}
@@ -105,7 +105,7 @@ gulp.task('watch', watch);
 function grid(done) {
 	delete require.cache[require.resolve('./smartgrid.js')];
 	let gridOptions = require('./smartgrid.js');
-	smartgrid(source.root + '/sass', gridOptions);
+	smartgrid(source.root + '/scss/base', gridOptions);
 	done();
 }
 gulp.task('grid', grid);
