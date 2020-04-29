@@ -1,1 +1,1 @@
-My html template for web.
+Online store.
